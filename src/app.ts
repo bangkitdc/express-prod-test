@@ -5,9 +5,9 @@ export class App {
   public app: express.Application;
   public port: string | number;
 
-  constructor() {
+  constructor(port: string | number) {
     this.app = express();
-    this.port = process.env.PORT || 3000;
+    this.port = port;
 
     this.initializeMiddlewares();
     this.initializeRoutes();
